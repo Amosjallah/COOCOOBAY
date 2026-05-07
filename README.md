@@ -32,6 +32,14 @@ npm start
 
 Import this Git repository with **Framework Preset: Next.js** and leave **Root Directory** empty (repo root). Vercel auto-detects `package.json` and `next.config.ts` here.
 
+If the site shows **403 Forbidden** (plain error page, not your UI), open [Deployment Protection](https://vercel.com/docs/security/deployment-protection) for the project:
+
+1. **Vercel Dashboard** → your project → **Settings** → **Deployment Protection**
+2. For a **public store**, turn **off** protection for the deployment type you’re opening (often **Preview** URLs require login while **Production** does not — or **Production** may be protected on paid plans).
+3. **Settings** → **Security** → **Firewall**: temporarily disable rules or add an exception while testing.
+
+Then **Redeploy** and open the **Production** domain from the latest successful deployment.
+
 ### Project structure (high level)
 
 - `src/app/*`: routes (Home, Customize, Shop, PDP, Photography, About, Contact, Checkout, etc.)
