@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/*
+  Coocoobay — advanced palette (logo-aligned):
+  warm cream paper, cocoa structure, jewel accents (rose, gold, cerulean, violet, sea-glass).
+*/
+:root {
+  color-scheme: light;
+  --background: #fefbf0;
+  --foreground: #221910;
+  --brand-cream: #fefbf0;
+  --brand-paper: #fffaf5;
+  --brand-cocoa: #5c4033;
+}
+
+@theme inline {
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fredoka), var(--font-nunito), ui-sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-paper: var(--brand-paper);
+  --color-brand-cocoa: var(--brand-cocoa);
+
+  /* Espresso ink — warmer than flat purple-black */
+  --color-brand-ink: #221910;
+  /* Cerulean — editorial sky */
+  --color-brand-sky: #4293c9;
+  --color-brand-sky-soft: #e3eef8;
+  /* Molten gold — luxury accent (token name kept as yellow for compatibility) */
+  --color-brand-yellow: #c9a227;
+  /* Rose quartz coral */
+  --color-brand-coral: #d9456a;
+  /* Dusty iris */
+  --color-brand-purple: #7d6dae;
+  /* Sea glass */
+  --color-brand-mint: #63a898;
+  --color-brand-white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  background-color: var(--brand-cream);
+  background-image:
+    radial-gradient(
+      ellipse 120% 90% at 0% -15%,
+      color-mix(in oklab, var(--color-brand-sky) 22%, transparent),
+      transparent 52%
+    ),
+    radial-gradient(
+      ellipse 90% 70% at 105% 5%,
+      color-mix(in oklab, var(--color-brand-coral) 14%, transparent),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse 80% 55% at 50% 110%,
+      color-mix(in oklab, var(--color-brand-yellow) 12%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 60% 45% at 85% 55%,
+      color-mix(in oklab, var(--color-brand-purple) 10%, transparent),
+      transparent 50%
+    ),
+    linear-gradient(
+      180deg,
+      var(--brand-cream) 0%,
+      var(--brand-paper) 42%,
+      color-mix(in oklab, var(--brand-cream) 88%, var(--color-brand-sky-soft)) 100%
+    );
+  background-attachment: fixed;
+}
+
+::selection {
+  background: color-mix(
+    in oklab,
+    var(--color-brand-yellow) 42%,
+    var(--color-brand-sky-soft)
+  );
+  color: var(--color-brand-ink);
+}
