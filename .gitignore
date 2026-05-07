@@ -1,13 +1,13 @@
-# Dependencies & builds (Next.js app in web/)
-web/node_modules/
-web/.next/
-web/out/
-web/.vercel/
-web/.pnpm-debug.log*
-web/npm-debug.log*
-web/yarn-error.log*
-web/*.tsbuildinfo
-web/next-env.d.ts
+# Dependencies & build output
+node_modules/
+.next/
+out/
+.vercel/
+.pnpm-debug.log*
+npm-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+next-env.d.ts
 
 # Env & secrets
 .env

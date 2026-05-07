@@ -1,13 +1,49 @@
-# Coocoobay workspace
+# Coocoobay Limited — Premium Kids Fashion (Next.js)
 
-The Next.js storefront lives in **`web/`** (lowercase folder name required for npm).
+Ultra-modern marketing + eCommerce UI for **Coocoobay Limited** (Ghana), built with **Next.js (App Router)**, **Tailwind CSS v4**, **Framer Motion**, and **Zustand** (cart + wishlist persistence).
 
-Quick start:
+### Prerequisites
+
+- Node.js **20+** recommended
+- npm (bundled with Node)
+
+### Setup
 
 ```bash
-cd web
 npm install
+```
+
+### Development
+
+```bash
 npm run dev
 ```
 
-See `web/README.md` for full setup notes.
+Open `http://localhost:3000`.
+
+### Production build
+
+```bash
+npm run build
+npm start
+```
+
+### Deploy on Vercel
+
+Import this Git repository with **Framework Preset: Next.js** and leave **Root Directory** empty (repo root). Vercel auto-detects `package.json` and `next.config.ts` here.
+
+### Project structure (high level)
+
+- `src/app/*`: routes (Home, Customize, Shop, PDP, Photography, About, Contact, Checkout, etc.)
+- `src/components/*`: reusable UI + sections
+- `src/lib/*`: constants + catalog data + helpers (`cn`)
+- `src/store/*`: client stores (`cart`, `wishlist`, `studio`)
+
+### Notes for integrating real payments / auth
+
+- Checkout UI is **ready for wiring** to Paystack + MoMo providers (keys via env vars).
+- Customer accounts page is a **placeholder** until you connect your preferred auth.
+
+### Images
+
+Remote images are loaded from Unsplash via `next/image` allowlist in `next.config.ts`.
