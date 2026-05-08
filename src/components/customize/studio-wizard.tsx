@@ -14,6 +14,7 @@ import {
 import { useCartStore } from "@/store/cart-store";
 import { cn } from "@/lib/cn";
 import Image from "next/image";
+import Link from "next/link";
 import { WIZARD_IMG } from "@/lib/products";
 
 const steps = [
@@ -361,9 +362,9 @@ export function StudioWizard() {
           <p className="mt-2">
             Need another opinion? Use the calculator on any product page — it translates age & height into our Ghana-friendly chart.
           </p>
-          <a className="mt-3 inline-flex font-black text-brand-purple" href="/shop/little-legends-tee">
+          <Link className="mt-3 inline-flex font-black text-brand-purple" href="/shop/little-legends-tee">
             Open sample PDP calculator →
-          </a>
+          </Link>
         </div>
       </div>
     </div>

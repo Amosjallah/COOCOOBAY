@@ -51,6 +51,8 @@ If you see **403 Forbidden** with an **`Error:`** header and **plain HTML** (not
 
 There is **no `middleware` or server rule** in this app returning 403; fixing access is entirely **Vercel account/project configuration**.
 
+This repo includes **`vercel.json`** (`framework: nextjs`), **`package.json` engines** (`node >=20.9.0`), and **`.node-version`** (`20`) so builds match Next.js 16 expectations on Vercel.
+
 ### Project structure (high level)
 
 - `src/app/*`: routes (Home, Customize, Shop, PDP, Photography, About, Contact, Checkout, etc.)
